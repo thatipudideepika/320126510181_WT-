@@ -1,0 +1,113 @@
+<html>
+  <head>
+    
+<script>
+  function f1()
+  {
+    var x = document.getElementById("a").value;
+    var y = document.getElementById("b").value;
+    var w = document.getElementById("ice").value;
+    var z= document.getElementById("cone").value;
+    d=parseInt(x)
+    e=parseInt(y)
+    f=parseInt(w)
+    g=parseInt(z)
+    if(f<=0 && d>0){
+    document.getElementById("k").innerHTML="pls select the pot cup  flavor";}
+    else if (g<=0 && e>0){
+      document.getElementById("k").innerHTML="pls select the cone flavor";
+  }
+    else{
+  document.getElementById("k").innerHTML=x+" "+w;
+    document.getElementById("l").innerHTML=y+" "+z;
+    let s=((d*f)+(e*g));
+    document.getElementById("n").innerHTML="Bill Sir!";
+    document.getElementById("m").innerHTML="Amount to be paid: "+s+".00";
+    document.getElementById("but").innerHTML="Regenrate";
+    document.getElementById("c").innerHTML="Thank You!!!";
+    }
+
+
+
+  }
+
+</script>
+</head>
+<style>
+  body{
+    padding-left: 250px;
+    padding-top: 100px;
+
+    display: flex;
+    background-image: url("newice.jpeg");
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+  .gnanu{
+    background-color:lightblue;
+    font-size: 20px;
+    font-style: bold;
+
+  }
+</style>
+<body>
+  <div class="g">
+  <h1  align="center" style="color: black;"><u><b>PLEASE PLACE YOUR ORDER</b></u></h1>
+  <table>
+    <tr>
+      <td><b><u>POT ICE-CREAM</u></b></td>
+      </tr><tr><td></td></tr>
+      <tr>
+      <td style="color: black"><b>
+    select flavor  :</b></td>
+    <td>
+      <select id="ice">
+        <option id="p1" value="0">none</option>
+        <option id="p1" value="100/- Vanilla">vanila-100/-</option>
+        <option id="p1" value="110/- Butter scotch">butter scotch-110/-</option>
+        <option id="p1" value="120/- Strawberry">straw berry-120/-</option>
+        <option id="p1" value="115/- Chocolate">choclate-115/-</option>
+      </select>
+    </td>
+    <td> <b>number of ice creams:</b></td>
+      <td>
+        <input type="number" placeholder="quantity" id="a" min="0"></td>
+        
+</tr>
+<tr>
+  <td style="color: black;"><b><u>
+    CORNETO CONE</u></b>
+  </td>
+  </tr>
+  <tr>
+  <td id="p"><b>
+    select flavor :</b></td>
+    <td>
+      <select  id="cone">
+        <option value="0">none</option>
+        <option value="100/- vanila">vanila-100/-</option>
+        <option value="110/- butter scotch">butter scotch-110/-</option>
+        <option value="120/- straw berry">straw berry-120/-</option>
+        <option value="130/- choclate">choclate-130/-</option>
+      </select></td>
+        <td><b> number of cone-icecreams :</b></td>
+      <td>
+        <input type="number" placeholder="quantity" id="b" min="0"></td>
+
+        
+</tr>
+<tr>
+  <td align="center">
+  <button onclick="f1(this)" id="but">generate bill</button></td>
+</tr>
+</table>
+<div class="gnanu">
+<div id="n"></div>
+<div id="k"></div>
+<div id="l"></div>
+<div id="m"></div>
+<div id="c"></div>
+<p id="d" style="font-size: 100px;"></p>
+</div>
+</body>
+</html>
